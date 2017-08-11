@@ -1,0 +1,31 @@
+Welcome to Student Monitoring System 1.0!
+This application is for storing and maintaining
+student information, offering everything you
+would ever need from an application of such kind.
+Description
+Name	: Student Info Management
+Version	: 1.0
+Author	: PVPSIT-Student
+Email	: rbablu94@gmail.com
+https://ram914.blogspot.in/
+Information
+Ram Prasad   :Developer
+Poorna Bindu :Developer
+Developers
+Key	      	: Function
+_________________________________________________
+About	      	: Gives brief detail of the App
+Analysis	: Provides Student Analysis
+Copy File     	: Copies a complete file in DB
+Delete Menu	: Deletes info from DB
+Edit          	: To perform edit operateion
+Edit Detail   	: Modifies a Record in DB
+Exit		: Terminates the application
+Font		: Changes Font of the letters
+Home Button	: Goes to homescreen
+Select Menu	: Retrives info from DB
+New	   	: Creates new Record in DB
+Reset	    	: Reset the fields
+Size	    	: To change size of the Window
+Style	    	: Changes Script style
+Submit	    	: Saves a new Record

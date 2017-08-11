@@ -1,0 +1,32 @@
+Welcome to Student Info Management 1.0.1!
+This application focuses on the storing and 
+maintaining student information, offering 
+everything you would need from such application.
+Description
+Name      : Student Info Management
+Version   : 1.0
+Author    : Student PVP Ram
+Email     : rbablu94@gmail.com
+https://ram914.blogspot.in/
+Information
+Ram Prasad	:Developer
+Poorna Bindu	:Developer
+Developers
+Key	      : Function
+_________________________________________________
+About		: Gives brief details of the App
+Analysis Menu	: Provides analysis of students
+Copy File	: Copies a complete file in DB
+Delete Menu	: Deletes students from DB
+Edit Button	: To perform edit operateion
+Edit Detail	: Modifies a Record in DB
+Exit		: Terminates the application
+Font		: Changes Font of the letters
+Home Icon	: Goes to Home Screen
+Select Menu	: Retrives info from DB
+Submit Button	: Adds a new student to the DB
+New		: Creates new Record in DB
+Reset		: Reset the fields
+Size		: To change size of the Window
+Style		: Changes Script style
+Submit		: Saves a new Record

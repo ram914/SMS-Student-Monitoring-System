@@ -1,0 +1,8 @@
+Departments,AE,CE,CSE,ECE,EEE,IT,MEC,,,,,,,,,,,
+Academic Years,I_YEAR,II_YEAR,III_YEAR,IV_YEAR,,,,,,,,,,,,,,
+Section Array,Student,Section 1,Section 2,,,,,,,,,,,,,,,
+Admission Type,Regular,Lateral,Detained,,,,,,,,,,,,,,,
+Attendance Groups,NA,>=90,<90    >=75,<75    >=65,<65,,,,,,,,,,,,,
+FontStyles,Algerian,Arial,Book Antiqua,Calibri,Castellar,Centaur,Comic Sans MS,Cooper Black,Copperplate Gothic Light,Corbel,Eras Bold ITC,Eras Light ITC,Franklin Gothic Demi Cond,HP Simplified,Maiandra GD,OCR A Extended,Papyrus,Showcard Gothic
+FontName,Plain,Bold,Italic,,,,,,,,,,,,,,,
+Fields,S.No,Student Id,Student Name,Department,Gender,Academic Year,CGPA,Attendance,Admission,Mobile,Address,,,,,,,
