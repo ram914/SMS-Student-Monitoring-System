@@ -36,6 +36,10 @@ import javax.swing.KeyStroke;
 import javax.swing.event.MenuEvent;
 import javax.swing.event.MenuListener;
 
+/**
+ *
+ * @author ram bablu
+ */
 public class GraphicsLoader {
     private static JFrame frame;
     static JMenuBar mb;
@@ -118,6 +122,10 @@ public class GraphicsLoader {
 
     private GraphicsLoader() {}
 
+    /**
+     *
+     * @param text
+     */
     public static void init(String text) {
         frame = new JFrame(text);
         frame.setIconImage(((ImageIcon)DataModel.getIcon("/information.png")).getImage());
@@ -531,13 +539,17 @@ public class GraphicsLoader {
         cont.add(comp, gbc);
     }
 
+    /**
+     *
+     */
     public static void customizeScreen() {
-        frame.setVisible(true);
+        
         GraphicsLoader.addToScreen(DEFAULT_PANEL);
         frame.setDefaultCloseOperation(3);
         frame.setResizable(false);
         frame.pack();
         frame.setLocationRelativeTo(null);
+        frame.setVisible(true);
     }
 
     private static void addToScreen(JPanel screen) {
@@ -546,6 +558,12 @@ public class GraphicsLoader {
         frame.add(screen);
     }
 
+    /**
+     *
+     * @param Style
+     * @param FontSize
+     * @param Size1
+     */
     public static void setFontSizeStyle(String Style, int FontSize, int Size1) {
         int i;
         int Size3 = Size1 + 10;
@@ -585,25 +603,25 @@ public class GraphicsLoader {
         for (i = 0; i < 6; ++i) {
             jmiSize[i].setFont(new Font(Style, FontSize, Size1));
         }
-        jlId.setFont(new Font(Style, FontX, Size3));
-        jlName.setFont(new Font(Style, FontX, Size3));
-        jlGender.setFont(new Font(Style, FontX, Size3));
-        jlDepartment.setFont(new Font(Style, FontX, Size3));
-        jlYear.setFont(new Font(Style, FontX, Size3));
-        jlCGPA.setFont(new Font(Style, FontX, Size3));
-        jlAttendance.setFont(new Font(Style, FontX, Size3));
-        jlAdmission.setFont(new Font(Style, FontX, Size3));
-        jlAddress.setFont(new Font(Style, FontX, Size3));
-        jlMobile.setFont(new Font(Style, FontX, Size3));
+        jlId.setFont(new Font(Style, FontSize, Size3));
+        jlName.setFont(new Font(Style, FontSize, Size3));
+        jlGender.setFont(new Font(Style, FontSize, Size3));
+        jlDepartment.setFont(new Font(Style, FontSize, Size3));
+        jlYear.setFont(new Font(Style, FontSize, Size3));
+        jlCGPA.setFont(new Font(Style, FontSize, Size3));
+        jlAttendance.setFont(new Font(Style, FontSize, Size3));
+        jlAdmission.setFont(new Font(Style, FontSize, Size3));
+        jlAddress.setFont(new Font(Style, FontSize, Size3));
+        jlMobile.setFont(new Font(Style, FontSize, Size3));
         jrbFemale.setFont(new Font(Style, 1, Size3));
         jrbMale.setFont(new Font(Style, 1, Size3));
-        jcbDepts.setFont(new Font(Style, FontX, Size3));
-        jcbYears.setFont(new Font(Style, FontX, Size3));
-        jcbAttendance.setFont(new Font(Style, FontX, Size3));
-        jcbAdmissionType.setFont(new Font(Style, FontX, Size3));
-        btnSubmit.setFont(new Font(Style, FontX, Size3));
-        btnReset.setFont(new Font(Style, FontX, Size3));
-        btnEdit.setFont(new Font(Style, FontX, Size3));
+        jcbDepts.setFont(new Font(Style, FontSize, Size3));
+        jcbYears.setFont(new Font(Style, FontSize, Size3));
+        jcbAttendance.setFont(new Font(Style, FontSize, Size3));
+        jcbAdmissionType.setFont(new Font(Style, FontSize, Size3));
+        btnSubmit.setFont(new Font(Style, FontSize, Size3));
+        btnReset.setFont(new Font(Style, FontSize, Size3));
+        btnEdit.setFont(new Font(Style, FontSize, Size3));
         GraphicsLoader.customizeScreen();
     }
 
@@ -689,9 +707,9 @@ public class GraphicsLoader {
                     break block8;
                 }
                 try {
-                    AllStudentDetails asd = new AllStudentDetails(fileName + ".csv", false);
+                    AllStudentDetails allStdDtls = new AllStudentDetails(fileName + ".csv", false);
                 }
-                catch (Exception em) {
+                catch (Exception ex) {
                     Message.error(frame, "Unable to delete given section");
                 }
                 GraphicsLoader.reset("--none--");
@@ -715,7 +733,7 @@ public class GraphicsLoader {
     private static void editSelected() {
         try {
             AllStudentDetails asd = new AllStudentDetails();
-            asd.assignValues(tf[0].getText(), tf[1].getText(), (String)jcbDepts.getSelectedItem(), jrbMale.isEnabled() ? "Male" : "Female", (String)jcbYears.getSelectedItem(), tf[2].getText(), (String)jcbAttendance.getSelectedItem(), (String)jcbAdmissionType.getSelectedItem(), tf[3].getText(), ta.getText());
+            asd.assignValues(tf[0].getText(), tf[1].getText(), (String)jcbDepts.getSelectedItem(), jrbMale.isSelected() ? "Male" : "Female", (String)jcbYears.getSelectedItem(), tf[2].getText(), (String)jcbAttendance.getSelectedItem(), (String)jcbAdmissionType.getSelectedItem(), tf[3].getText(), ta.getText());
             Student s = asd.modifyFile(2, new Student(), "");
             if (s.result == 1) {
                 Message.acknowledge(frame, "Record " + tf[0].getText() + " has been edited");
@@ -751,7 +769,7 @@ public class GraphicsLoader {
 
     private static void submit() {
         Student s = new Student(  tf[0].getText(), tf[1].getText(), (String)jcbDepts.getSelectedItem(), 
-                jrbMale.isEnabled() ? "Male" : "Female", (String)jcbYears.getSelectedItem(), 
+                jrbMale.isSelected() ? "Male" : "Female", (String)jcbYears.getSelectedItem(), 
                 Double.parseDouble("0" + tf[2].getText()), (String)jcbAttendance.getSelectedItem(),
                 (String)jcbAdmissionType.getSelectedItem(), tf[3].getText(), ta.getText(), true);
         if (s.result == 0) {
@@ -763,6 +781,10 @@ public class GraphicsLoader {
         }
     }
 
+    /**
+     *
+     * @param value
+     */
     public static void setEnableDisable(boolean value) {
         for (int i = 0; i < 4; ++i) {
             tf[i].setEditable(value);
