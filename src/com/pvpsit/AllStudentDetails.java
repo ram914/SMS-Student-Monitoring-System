@@ -186,7 +186,7 @@ public class AllStudentDetails {
             }
             String current = (new StringBuilder()).append(s.id).append(",").append(s.name).append(",").append(s.dept).append(",").append(s.gender).append(",").append(s.stdyear).append(",").append(s.cgpa).append(",").append(s.stdatndnce).append(",").append(s.stdAdm).append(",").append(s.phone).append(",").append(s.address).toString();
             ArrayList readTheFile = DataModel.readTheFile(f.toString());
-            stdRecordList = Sort.sort(stdRecordList, current, s.id);
+            stdRecordList = Sort.sort(readTheFile, current, s.id);
             write(f.toString());
         } catch(Exception ex) {
             Message.error(null, (new StringBuilder()).append("Exception ").append(ex.toString()).append("\n while opening the file").toString());
